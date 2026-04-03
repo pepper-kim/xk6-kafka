@@ -95,17 +95,17 @@ func registerMetrics(vu modules.VU) (kafkaMetrics, error) {
 	}
 
 	if kafkaMetrics.ReaderDialTime, err = registry.NewMetric(
-		"kafka_reader_dial_seconds", metrics.Trend, metrics.Time); err != nil {
+		"kafka_reader_dial_ms", metrics.Trend, metrics.Time); err != nil {
 		return kafkaMetrics, errors.Unwrap(err)
 	}
 
 	if kafkaMetrics.ReaderReadTime, err = registry.NewMetric(
-		"kafka_reader_read_seconds", metrics.Trend, metrics.Time); err != nil {
+		"kafka_reader_read_ms", metrics.Trend, metrics.Time); err != nil {
 		return kafkaMetrics, errors.Unwrap(err)
 	}
 
 	if kafkaMetrics.ReaderWaitTime, err = registry.NewMetric(
-		"kafka_reader_wait_seconds", metrics.Trend, metrics.Time); err != nil {
+		"kafka_reader_wait_ms", metrics.Trend, metrics.Time); err != nil {
 		return kafkaMetrics, errors.Unwrap(err)
 	}
 
@@ -175,22 +175,22 @@ func registerMetrics(vu modules.VU) (kafkaMetrics, error) {
 	}
 
 	if kafkaMetrics.WriterBatchTime, err = registry.NewMetric(
-		"kafka_writer_batch_seconds", metrics.Trend, metrics.Time); err != nil {
+		"kafka_writer_batch_ms", metrics.Trend, metrics.Time); err != nil {
 		return kafkaMetrics, errors.Unwrap(err)
 	}
 
 	if kafkaMetrics.WriterBatchQueueTime, err = registry.NewMetric(
-		"kafka_writer_batch_queue_seconds", metrics.Trend, metrics.Time); err != nil {
+		"kafka_writer_batch_queue_ms", metrics.Trend, metrics.Time); err != nil {
 		return kafkaMetrics, errors.Unwrap(err)
 	}
 
 	if kafkaMetrics.WriterWriteTime, err = registry.NewMetric(
-		"kafka_writer_write_seconds", metrics.Trend, metrics.Time); err != nil {
+		"kafka_writer_write_ms", metrics.Trend, metrics.Time); err != nil {
 		return kafkaMetrics, errors.Unwrap(err)
 	}
 
 	if kafkaMetrics.WriterWaitTime, err = registry.NewMetric(
-		"kafka_writer_wait_seconds", metrics.Trend, metrics.Time); err != nil {
+		"kafka_writer_wait_ms", metrics.Trend, metrics.Time); err != nil {
 		return kafkaMetrics, errors.Unwrap(err)
 	}
 
